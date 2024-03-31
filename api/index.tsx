@@ -307,6 +307,7 @@ app.frame('/build-your-first-frame', (c) => {
       </div>
     ),
     intents: [
+      <Button action="/tutorials">◀️ Back</Button>,
       <Button.Link href="https://docs.farcaster.xyz/developers/guides/frames/poll">✨ Read Online - Build your first frame</Button.Link>,
     ]
   })
@@ -342,6 +343,7 @@ app.frame('/sign-in-with-farcaster', (c) => {
       </div>
     ),
     intents: [
+      <Button action="/tutorials">◀️ Back</Button>,
       <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Sign in with Farcaster</Button.Link>,
     ]
   })
@@ -377,6 +379,7 @@ app.frame('/wirte-your-first-app', (c) => {
       </div>
     ),
     intents: [
+      <Button action="/tutorials">◀️ Back</Button>,
       <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Write your first app</Button.Link>,
     ]
   })
