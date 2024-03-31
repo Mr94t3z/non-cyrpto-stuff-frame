@@ -3,8 +3,8 @@ import { Button, Frog } from 'frog'
 import { handle } from 'frog/vercel'
 
 // Uncomment this packages to tested on local server
-// import { devtools } from 'frog/dev';
-// import { serveStatic } from 'frog/serve-static';
+import { devtools } from 'frog/dev';
+import { serveStatic } from 'frog/serve-static';
 
 // Uncomment to use Edge Runtime.
 // export const config = {
@@ -16,6 +16,19 @@ export const app = new Frog({
   basePath: '/api/frame',
   // Supply a Hub to enable frame verification.
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
+  imageOptions: {
+    /* Other default options */
+    fonts: [
+      {
+        name: 'Montserrat',
+        source: 'google',
+      },
+      {
+        name: 'Space Mono',
+        source: 'google',
+      },
+    ],    
+  },
 })
 
 // Initial Frame
@@ -47,6 +60,7 @@ app.frame('/getting-started', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 35,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -85,6 +99,7 @@ app.frame('/learn', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -123,6 +138,7 @@ app.frame('/farcaster-101', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -159,6 +175,7 @@ app.frame('/core-concepts', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -195,6 +212,7 @@ app.frame('/architecture', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -232,6 +250,7 @@ app.frame('/tutorials', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -270,6 +289,7 @@ app.frame('/build-your-first-frame', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -306,6 +326,7 @@ app.frame('/sign-in-with-farcaster', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -342,6 +363,7 @@ app.frame('/wirte-your-first-app', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -379,6 +401,7 @@ app.frame('/documentation', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -417,6 +440,7 @@ app.frame('/farcaster-spec', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -453,6 +477,7 @@ app.frame('/frame-spec', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -489,6 +514,7 @@ app.frame('/apis', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
+          fontFamily: 'Space Mono',
           fontSize: 40,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
@@ -509,7 +535,7 @@ app.frame('/apis', (c) => {
 })
 
 // Uncomment this line code to tested on local server
-// devtools(app, { serveStatic });
+devtools(app, { serveStatic });
 
 export const GET = handle(app)
 export const POST = handle(app)
