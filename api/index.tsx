@@ -1,0 +1,389 @@
+import { Button, Frog } from 'frog'
+// import { neynar } from 'frog/hubs'
+import { handle } from 'frog/vercel'
+
+// Uncomment this packages to tested on local server
+import { devtools } from 'frog/dev';
+import { serveStatic } from 'frog/serve-static';
+
+// Uncomment to use Edge Runtime.
+// export const config = {
+//   runtime: 'edge',
+// }
+
+export const app = new Frog({
+  assetsPath: '/',
+  basePath: '/api/frame',
+  // Supply a Hub to enable frame verification.
+  // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
+})
+
+app.frame('/', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 50,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+        Welcome to Farcaster! Discover more than crypto with us.
+      </div>
+    ),
+    intents: [
+      <Button action='/getting-started'>🌟 Getting Started</Button>,
+      // <Button value="art">👥 Community Channels</Button>,
+      // <Button value="science">📚 Learning Resources</Button>,
+      // <Button value="get_started">💬 Join the Conversation</Button>,
+    ]
+  })
+})
+
+
+app.frame('/getting-started', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 30,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Farcaster is a sufficiently decentralized social network built on Ethereum. It is a public social network similar to Twitter and Reddit. Users can create profiles, post "casts" and follow others. They own their accounts and relationships with other users and are free to move between different apps.
+      </div>
+    ),
+    intents: [
+      // <Button value="art">👥 Community Channels</Button>,
+      <Button action="/learn">📚 Learn</Button>,
+      <Button action="/tutorials">💻 Tutorials</Button>,
+    ]
+  })
+})
+
+// Learn Seciton
+app.frame('/learn', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       If you want to learn more, get started by diving into these concepts:
+      </div>
+    ),
+    intents: [
+      <Button action="/farcaster-101">1️⃣ Farcaster 101</Button>,
+      <Button action="/core-concepts">2️⃣ Core Concepts</Button>,
+      <Button action="/architecture">3️⃣ Architecture</Button>,
+      // <Button action="/getting-started">🙅🏻‍♂️ Cancel</Button>,
+    ]
+  })
+})
+
+
+app.frame('/farcaster-101', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Farcaster 101 - a walkthrough of the Farcaster protocol in short, 5 minute videos.
+      </div>
+    ),
+    intents: [
+      <Button action="/learn">◀️ Back</Button>,
+      <Button.Link href="https://www.youtube.com/playlist?list=PL0eq1PLf6eUdm35v_840EGLXkVJDhxhcF">✨ Watch Online - Farcaster 101</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/core-concepts', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Core Concepts - learn about the building blocks of Farcaster, starting with accounts.
+      </div>
+    ),
+    intents: [
+      <Button action="/learn">◀️ Back</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/learn/what-is-farcaster/accounts">✨ Read Online - Core Concepts</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/architecture', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Architecture - a breakdown of Farcaster's onchain and offchain systems.
+      </div>
+    ),
+    intents: [
+      <Button action="/learn">◀️ Back</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/learn/architecture/overviews">✨ Read Online - Architecture</Button.Link>,
+    ]
+  })
+})
+
+
+// Tutorials Section
+app.frame('/tutorials', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Find more how-tos, guide and tutorials like this in the developers section.
+      </div>
+    ),
+    intents: [
+      <Button action="/build-your-first-frame">1️⃣ Build your first frame</Button>,
+      <Button action="/sign-in-with-farcaster">2️⃣ Sign in with Farcaster</Button>,
+      <Button action="/wirte-your-first-app">3️⃣ Write your first app</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/developers/">More</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/build-your-first-frame', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Build your first frame - Make mini-apps that run inside Farcaster.
+      </div>
+    ),
+    intents: [
+      <Button.Link href="https://docs.farcaster.xyz/developers/guides/frames/poll">✨ Read Online - Build your first frame</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/sign-in-with-farcaster', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Sign in with Farcaster - Let users login to your app with their Farcaster account.
+      </div>
+    ),
+    intents: [
+      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Sign in with Farcaster</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/wirte-your-first-app', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Write your first app - Publish a "Hello World" message to Farcaster.
+      </div>
+    ),
+    intents: [
+      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Write your first app</Button.Link>,
+    ]
+  })
+})
+
+// Uncomment this line code to tested on local server
+devtools(app, { serveStatic });
+
+export const GET = handle(app)
+export const POST = handle(app)
