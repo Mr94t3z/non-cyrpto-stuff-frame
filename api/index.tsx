@@ -20,32 +20,7 @@ export const app = new Frog({
 
 app.frame('/', (c) => {
   return c.res({
-    image: (
-      <div
-        style={{
-          alignItems: 'center',
-          background: 'linear-gradient(to right, #432889, #17101F)',
-          backgroundSize: '100% 100%',
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          height: '100%',
-          justifyContent: 'center',
-          textAlign: 'center',
-          width: '100%',
-          color: 'white',
-          fontSize: 50,
-          fontStyle: 'normal',
-          letterSpacing: '-0.025em',
-          lineHeight: 1.4,
-          marginTop: 0,
-          padding: '0 120px',
-          whiteSpace: 'pre-wrap',
-        }}
-      >
-        Welcome to Farcaster! Discover more than crypto with us.
-      </div>
-    ),
+    image: '/images/non-crypto-stuff.jpeg',
     intents: [
       <Button action='/getting-started'>🌟 Getting Started</Button>,
       <Button.Link href="https://warpcast.com/~/channel/non-crypto-stuff">🔔 Subscribe Channel</Button.Link>,
