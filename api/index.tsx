@@ -48,9 +48,8 @@ app.frame('/', (c) => {
     ),
     intents: [
       <Button action='/getting-started'>🌟 Getting Started</Button>,
-      // <Button value="art">👥 Community Channels</Button>,
-      // <Button value="science">📚 Learning Resources</Button>,
-      // <Button value="get_started">💬 Join the Conversation</Button>,
+      <Button.Link href="https://warpcast.com/~/channel/non-crypto-stuff">🔔 Subscribe Channel</Button.Link>,
+      // <Button value="chat">💬 Join the Conversation</Button>,
     ]
   })
 })
@@ -72,7 +71,7 @@ app.frame('/getting-started', (c) => {
           textAlign: 'center',
           width: '100%',
           color: 'white',
-          fontSize: 30,
+          fontSize: 35,
           fontStyle: 'normal',
           letterSpacing: '-0.025em',
           lineHeight: 1.4,
@@ -88,6 +87,7 @@ app.frame('/getting-started', (c) => {
       // <Button value="art">👥 Community Channels</Button>,
       <Button action="/learn">📚 Learn</Button>,
       <Button action="/tutorials">💻 Tutorials</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/developers/">🔥 More</Button.Link>,
     ]
   })
 })
@@ -125,7 +125,7 @@ app.frame('/learn', (c) => {
       <Button action="/farcaster-101">1️⃣ Farcaster 101</Button>,
       <Button action="/core-concepts">2️⃣ Core Concepts</Button>,
       <Button action="/architecture">3️⃣ Architecture</Button>,
-      // <Button action="/getting-started">🙅🏻‍♂️ Cancel</Button>,
+      <Button action="/getting-started">🙅🏻‍♂️ Cancel</Button>,
     ]
   })
 })
@@ -161,7 +161,7 @@ app.frame('/farcaster-101', (c) => {
     ),
     intents: [
       <Button action="/learn">◀️ Back</Button>,
-      <Button.Link href="https://www.youtube.com/playlist?list=PL0eq1PLf6eUdm35v_840EGLXkVJDhxhcF">✨ Watch Online - Farcaster 101</Button.Link>,
+      <Button.Link href="https://www.youtube.com/playlist?list=PL0eq1PLf6eUdm35v_840EGLXkVJDhxhcF">✨ Watch Online</Button.Link>,
     ]
   })
 })
@@ -197,7 +197,7 @@ app.frame('/core-concepts', (c) => {
     ),
     intents: [
       <Button action="/learn">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/learn/what-is-farcaster/accounts">✨ Read Online - Core Concepts</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/learn/what-is-farcaster/accounts">✨ Read Online</Button.Link>,
     ]
   })
 })
@@ -233,7 +233,7 @@ app.frame('/architecture', (c) => {
     ),
     intents: [
       <Button action="/learn">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/learn/architecture/overviews">✨ Read Online - Architecture</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/learn/architecture/overviews">✨ Read Online</Button.Link>,
     ]
   })
 })
@@ -265,14 +265,14 @@ app.frame('/tutorials', (c) => {
           whiteSpace: 'pre-wrap',
         }}
       >
-       Find more how-tos, guide and tutorials like this in the developers section.
+       Learn how to build frames, which are mini-apps that run inside a Farcaster feed.
       </div>
     ),
     intents: [
       <Button action="/build-your-first-frame">1️⃣ Build your first frame</Button>,
       <Button action="/sign-in-with-farcaster">2️⃣ Sign in with Farcaster</Button>,
       <Button action="/wirte-your-first-app">3️⃣ Write your first app</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/developers/">More</Button.Link>,
+      <Button action="/getting-started">🙅🏻‍♂️ Cancel</Button>,
     ]
   })
 })
@@ -308,7 +308,7 @@ app.frame('/build-your-first-frame', (c) => {
     ),
     intents: [
       <Button action="/tutorials">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/developers/guides/frames/poll">✨ Read Online - Build your first frame</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/developers/guides/frames/poll">✨ Read Online</Button.Link>,
     ]
   })
 })
@@ -344,7 +344,7 @@ app.frame('/sign-in-with-farcaster', (c) => {
     ),
     intents: [
       <Button action="/tutorials">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Sign in with Farcaster</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online</Button.Link>,
     ]
   })
 })
@@ -380,7 +380,7 @@ app.frame('/wirte-your-first-app', (c) => {
     ),
     intents: [
       <Button action="/tutorials">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online - Write your first app</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online</Button.Link>,
     ]
   })
 })
