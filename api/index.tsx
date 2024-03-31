@@ -22,7 +22,7 @@ app.frame('/', (c) => {
   return c.res({
     image: '/images/non-crypto-stuff.jpeg',
     intents: [
-      <Button action='/getting-started'>🌟 Getting Started</Button>,
+      <Button action="/getting-started">🌟 Getting Started</Button>,
       <Button.Link href="https://warpcast.com/~/channel/non-crypto-stuff">🔔 Subscribe Channel</Button.Link>,
       // <Button value="chat">💬 Join the Conversation</Button>,
     ]
@@ -59,9 +59,9 @@ app.frame('/getting-started', (c) => {
       </div>
     ),
     intents: [
-      // <Button value="art">👥 Community Channels</Button>,
       <Button action="/learn">📚 Learn</Button>,
       <Button action="/tutorials">💻 Tutorials</Button>,
+      <Button action="/documentation">📄 Docs</Button>,
       <Button.Link href="https://docs.farcaster.xyz/developers/">🔥 More</Button.Link>,
     ]
   })
