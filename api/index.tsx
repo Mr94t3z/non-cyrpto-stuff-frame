@@ -18,6 +18,7 @@ export const app = new Frog({
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
 })
 
+// Initial Frame
 app.frame('/', (c) => {
   return c.res({
     image: '/images/non-crypto-stuff.jpeg',
@@ -62,7 +63,7 @@ app.frame('/getting-started', (c) => {
       <Button action="/learn">📚 Learn</Button>,
       <Button action="/tutorials">💻 Tutorials</Button>,
       <Button action="/documentation">📄 Docs</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/developers/">🔥 More</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/">🔥 More</Button.Link>,
     ]
   })
 })
@@ -356,6 +357,153 @@ app.frame('/wirte-your-first-app', (c) => {
     intents: [
       <Button action="/tutorials">◀️ Back</Button>,
       <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online</Button.Link>,
+    ]
+  })
+})
+
+
+// Documentation Section
+app.frame('/documentation', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       This is a general category encompassing all written materials, guidelines, and specifications related to Farcaster.
+      </div>
+    ),
+    intents: [
+      <Button action="/farcaster-spec">1️⃣ Farcaster Spec</Button>,
+      <Button action="/frame-spec">2️⃣ Frame Spec</Button>,
+      <Button action="/apis">3️⃣ APIs</Button>,
+      <Button action="/getting-started">🙅🏻‍♂️ Cancel</Button>,
+    ]
+  })
+})
+
+
+app.frame('/farcaster-spec', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Farcaster Spec - Specifications for Farcaster, including its contracts and hubs.
+      </div>
+    ),
+    intents: [
+      <Button action="/documentation">◀️ Back</Button>,
+      <Button.Link href="https://github.com/farcasterxyz/protocol">✨ Read Online</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/frame-spec', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       Frame Spec - Specifications for writing and rendering frames in Farcaster apps.
+      </div>
+    ),
+    intents: [
+      <Button action="/documentation">◀️ Back</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/reference/frames/spec">✨ Read Online</Button.Link>,
+    ]
+  })
+})
+
+
+app.frame('/apis', (c) => {
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'linear-gradient(to right, #432889, #17101F)',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+          color: 'white',
+          fontSize: 40,
+          fontStyle: 'normal',
+          letterSpacing: '-0.025em',
+          lineHeight: 1.4,
+          marginTop: 0,
+          padding: '0 120px',
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+       APIs - Docs for API's and ABI's for onchain and offchain systems.
+      </div>
+    ),
+    intents: [
+      <Button action="/documentation">◀️ Back</Button>,
+      <Button.Link href="https://docs.farcaster.xyz/reference/">✨ Read Online</Button.Link>,
     ]
   })
 })
