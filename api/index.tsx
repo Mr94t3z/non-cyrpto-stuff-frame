@@ -1,4 +1,5 @@
 import { Button, Frog } from 'frog'
+// import { Box, Heading, Text, VStack, vars } from './ui.js'
 // import { neynar } from 'frog/hubs'
 import { handle } from 'frog/vercel'
 
@@ -14,6 +15,7 @@ import { handle } from 'frog/vercel'
 export const app = new Frog({
   assetsPath: '/',
   basePath: '/api/frame',
+  // ui: { vars },
   // Supply a Hub to enable frame verification.
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
   imageOptions: {
@@ -30,6 +32,7 @@ export const app = new Frog({
     ],    
   },
 })
+
 
 // Initial Frame
 app.frame('/', (c) => {
