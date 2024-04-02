@@ -381,7 +381,7 @@ app.frame('/wirte-your-first-app', (c) => {
     ),
     intents: [
       <Button action="/tutorials">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/auth-kit/installation">✨ Read Online</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/developers/">✨ Read Online</Button.Link>,
     ]
   })
 })
