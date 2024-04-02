@@ -230,7 +230,7 @@ app.frame('/architecture', (c) => {
     ),
     intents: [
       <Button action="/learn">◀️ Back</Button>,
-      <Button.Link href="https://docs.farcaster.xyz/learn/architecture/overviews">✨ Read Online</Button.Link>,
+      <Button.Link href="https://docs.farcaster.xyz/learn/architecture/overview">✨ Read Online</Button.Link>,
     ]
   })
 })
